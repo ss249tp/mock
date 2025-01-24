@@ -24,7 +24,7 @@ dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/ss249tp/mock"
-Documentation = "https://about.readthedocs.com/"
+Documentation = "https://ss249tp-mock.readthedocs.io"
 Issues = "https://github.com/ss249tp/mock/issues"
 
 [dependency-groups]

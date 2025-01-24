@@ -5,7 +5,7 @@
   </p>
 
   <h4>
-    <a href="https://about.readthedocs.com/">Documentation</a>
+    <a href="https://ss249tp-mock.readthedocs.io">Documentation</a>
   <span> · </span>
     <a href="https://github.com/ss249tp/mock/issues">Issues</a>
   </h4>
