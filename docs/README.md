@@ -1,7 +1,7 @@
 <div align="center">
   <h1><b>mock</b></h1>
   <p>
-    A mock project
+    A mock Python package
   </p>
 
   <h4>

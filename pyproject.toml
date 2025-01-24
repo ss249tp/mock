@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "mock"
 version = "0.1.0"
-description = "A mock project"
+description = "A mock Python package"
 authors = [
     { name = "ss249tp", email = "ss249.tp@gmail.com" }
 ]
