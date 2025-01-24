@@ -1,0 +1,91 @@
+site_name: mock documentation
+
+
+repo_url: 'https://github.com/ss249tp/mock'
+repo_name: 'ss249tp/mock'
+
+
+nav:
+- README.md
+
+
+theme:
+
+  name: material
+
+  language: en
+
+  icon:
+    logo: material/test-tube
+
+  features:
+  - navigation.prune
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.top
+  - navigation.tracking
+  - toc.follow
+  - toc.integrate
+  - search.highlight
+  - search.suggest
+
+  palette:
+
+  # State: Light mode
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: 'Light -> Dark'
+    primary: 'blue grey'
+    accent: indigo
+
+  # State: Dark mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: 'Dark -> Light'
+    primary: black
+
+
+extra:
+
+  social:
+  - icon: fontawesome/brands/github
+    link: 'https://github.com/ss249tp/mock'
+  - icon: fontawesome/brands/python
+    link: 'https://pypi.org'
+
+
+plugins:
+- autorefs
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        paths: [src]
+        options:
+          docstring_section_style: list
+          line_length: 60
+          members_order: source
+          separate_signature: true
+          show_root_toc_entry: false
+          show_symbol_type_heading: true
+          show_symbol_type_toc: true
+- offline
+- search
+
+
+markdown_extensions:
+
+# Python Markdown
+- admonition
+- attr_list
+- toc:
+    permalink: true
+
+# Python Markdown Extensions
+- pymdownx.highlight
+- pymdownx.inlinehilite
+- pymdownx.superfences
