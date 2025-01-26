@@ -33,4 +33,5 @@ dev = [
     "mkdocs-material",
     "mkdocstrings-python",
     "pytest",
+    "pytest-cov",
 ]
