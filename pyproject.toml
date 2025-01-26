@@ -32,4 +32,5 @@ dev = [
     "ipykernel",
     "mkdocs-material",
     "mkdocstrings-python",
+    "pytest",
 ]
