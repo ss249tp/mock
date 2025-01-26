@@ -5,7 +5,10 @@
   </p>
 </div>
 
+---
 
+[![PyPI](https://img.shields.io/pypi/v/ss249tp-mock?pypiBaseUrl=https%3A%2F%2Ftest.pypi.org&style=for-the-badge)](
+https://test.pypi.org/project/ss249tp-mock)
 [![Documentation](https://img.shields.io/readthedocs/ss249tp-mock.svg?style=for-the-badge)](
 https://ss249tp-mock.readthedocs.io)
 [![Issues](https://img.shields.io/github/issues/ss249tp/mock.svg?style=for-the-badge)](
