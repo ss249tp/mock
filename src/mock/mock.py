@@ -7,8 +7,6 @@ __all__ = (
 import os
 import string
 
-PUNCTUTATIONS = frozenset(string.punctuation)
-
 
 def load_text(path: str) -> str:
     """Load contents of a text file into a string.
@@ -22,6 +20,7 @@ def load_text(path: str) -> str:
     Raises:
         ValueError: If `path` cannot be read as a text file.
     """
+
     if not os.path.isfile(path):
         raise ValueError(f"{path} either does not exist or is not a file.")
 
@@ -41,4 +40,8 @@ def tokenize(text: str) -> list[str]:
     Returns:
         A list of words in `text`, but with punctuations removed and letters lowercased.
     """
-    return "".join([(" " if c in PUNCTUTATIONS else c) for c in text.lower()]).split()
+
+    for p in string.punctuation:
+        text = text.replace(p, " ")
+
+    return text.lower().split()
