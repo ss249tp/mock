@@ -2,9 +2,12 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/mock"]
+
 [project]
-name = "mock"
-version = "0.1.0"
+name = "ss249tp-mock"
+version = "0.1.1"
 description = "A mock Python package"
 authors = [
     { name = "ss249tp", email = "ss249.tp@gmail.com" }
