@@ -55,7 +55,7 @@ extra:
   social:
   - icon: fontawesome/brands/github
     link: 'https://github.com/ss249tp/mock'
-  - icon: fontawesome/brands/python
+  - icon: simple/pypi #fontawesome/brands/python
     link: 'https://test.pypi.org/project/ss249tp-mock'
 
 
