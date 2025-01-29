@@ -20,9 +20,8 @@ jobs:
 
       - uses: astral-sh/setup-uv@v5
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version-file: ".python-version"
+      - name: Set up Python
+        run: uv python install
 
       - name: Set up project
         run: uv sync --all-extras --dev
