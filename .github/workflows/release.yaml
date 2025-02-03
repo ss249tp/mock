@@ -1,0 +1,41 @@
+name: release
+
+
+on:
+  push:
+    branches: main-gha
+
+
+jobs:
+
+  release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true  # https://docs.astral.sh/uv/guides/integration/github/#caching
+
+      - name: Update CHANGELOG
+        run: |
+          uvx git cliff --bump -o CHANGELOG.md
+          git config set user.name 'github-actions[bot]'
+          git config set user.email 'github-actions[bot]@users.noreply.github.com'
+          git add CHANGELOG.md
+          git commit -m "docs: Update CHANGELOG"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main-gha
+
+
+# Use pull request instead of commit?
+# If ci passes:
+# Automatically bump the version number.
+# Auto-generate the CHANGELOG using git-cliff.
+# Tag the latest commit with the bumped version number.
+# Create a release on GitHub.
+# Publish the release to PyP
