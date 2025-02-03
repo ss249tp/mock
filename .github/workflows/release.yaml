@@ -26,7 +26,7 @@ jobs:
         run: |
           uvx --from git-cliff git cliff --bump -o CHANGELOG.md
           git config set user.name ss249tp
-          git config set user.email ss249tp@gmail.com
+          git config set user.email ss249.tp@gmail.com
           git add CHANGELOG.md
           git commit -m "docs: Update CHANGELOG"
           git push https://${{ secrets.ADMIN_TOKEN }}@github.com/${{ github.repository }}.git main-gha
