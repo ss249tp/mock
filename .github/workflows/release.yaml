@@ -12,9 +12,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
 
       - uses: actions/checkout@v4
@@ -32,7 +29,7 @@ jobs:
           git config set user.email 'github-actions[bot]@users.noreply.github.com'
           git add CHANGELOG.md
           git commit -m "docs: Update CHANGELOG"
-          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main-gha
+          git push https://${{ secrets.ADMIN_TOKEN }}@github.com/${{ github.repository }}.git main-gha
 
 
 # Use pull request instead of commit?
